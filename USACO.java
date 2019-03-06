@@ -12,7 +12,7 @@ public class USACO {
       readIn("makelake.1.in");
     }
     catch (Exception e) {
-      
+
     }
   }
   public static void readIn(String filename) throws FileNotFoundException {
@@ -26,6 +26,11 @@ public class USACO {
     }
     R = temp.size();
     C = temp.get(0).length();
+    for (int i = 0; i < R; i++) {
+      for (int i2 = 0; i2 < C; i2++) {
+        lake[i][i2] = temp.get(R).charAt(C);
+      }
+    }
   }
   public static int bronze(String filename) {
     return -1;
