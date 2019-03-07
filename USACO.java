@@ -34,9 +34,11 @@ public class USACO {
         for (int colModifier = 0; colModifier < 3; colModifier++) {
           int checkRow = rowModifier + R_s;
           int checkCol = colModifier + C_s;
-          System.out.println(lake[checkRow][checkCol] + " ");
-          lake[checkRow][checkCol] -= D_s;
-          System.out.println(lake[checkRow][checkCol] + "\n");
+          if (checkRow < R && checkCol < C) {
+            System.out.println(lake[checkRow][checkCol] + " ");
+            lake[checkRow][checkCol] -= D_s;
+            System.out.println(lake[checkRow][checkCol] + "\n");
+          }
         }
       }
     }
