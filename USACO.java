@@ -26,7 +26,9 @@ public class USACO {
       int D_s = Integer.parseInt(text.next());
       for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
         for (int colModifier = 0; colModifier < 3; colModifier++) {
-          
+          int checkRow = rowModifier + R_s;
+          int checkCol = colModifier + C_s;
+          lake[checkRow][checkCol] -= D_s; 
         }
       }
     }
