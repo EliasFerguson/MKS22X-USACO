@@ -26,7 +26,7 @@ public class USACO {
     }
     //Done filling.
     //Time to receive the digging instructions, corresponding to i.
-  /*  for (int i = 0; i < N; i++) {
+    for (int i = 0; i < N; i++) {
       int R_s = Integer.parseInt(text.next());
       int C_s = Integer.parseInt(text.next());
       int D_s = Integer.parseInt(text.next());
@@ -35,10 +35,10 @@ public class USACO {
           int checkRow = rowModifier + R_s;
           int checkCol = colModifier + C_s;
           lake[checkRow][checkCol] -= D_s;
+          System.out.println(lake[checkRow][checkCol]);
         }
       }
     }
-    */
     return -1;
   }
   public static int silver(String filename) {
