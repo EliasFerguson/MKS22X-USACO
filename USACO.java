@@ -14,9 +14,13 @@ public class USACO {
     Scanner text = new Scanner(in);
     //Filling the lake with the text file information.
     int R = Integer.parseInt(text.next());
+    //System.out.println(R);
     int C = Integer.parseInt(text.next());
+    //System.out.println(C);
     int E = Integer.parseInt(text.next());
+    //System.out.println(E);
     int N = Integer.parseInt(text.next());
+    //System.out.println(N);
     int[][] lake = new int[R][C];
     for (int i = 0; i < R; i++) {
       for (int i2 = 0; i2 < C; i2++) {
