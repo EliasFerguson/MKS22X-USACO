@@ -21,7 +21,7 @@ public class USACO {
     for (int i = 0; i < R; i++) {
       for (int i2 = 0; i2 < C; i2++) {
         lake[i][i2] = Integer.parseInt(text.next());
-        System.out.print(lake[i][i2] + " ");
+        //System.out.print(lake[i][i2] + " ");
       }
     }
     //Done filling.
