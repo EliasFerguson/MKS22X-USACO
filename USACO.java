@@ -54,6 +54,7 @@ public class USACO {
       }
       System.out.println(debug);
     }
+    
     return -1;
   }
   public static int silver(String filename) {
