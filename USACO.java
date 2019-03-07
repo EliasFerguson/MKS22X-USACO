@@ -45,6 +45,14 @@ public class USACO {
           }
         }
       }
+      String debug = "";
+      for (int r = 0; r < R; r++) {
+        for (int c = 0; c < C; c++) {
+          debug += lake[r][c] + " ";
+        }
+        debug += '\n';
+      }
+      System.out.println(debug);
     }
     return -1;
   }
