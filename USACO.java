@@ -24,6 +24,11 @@ public class USACO {
       int R_s = Integer.parseInt(text.next());
       int C_s = Integer.parseInt(text.next());
       int D_s = Integer.parseInt(text.next());
+      for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
+        for (int colModifier = 0; colModifier < 3; colModifier++) {
+          
+        }
+      }
     }
     return -1;
   }
