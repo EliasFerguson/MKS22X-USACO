@@ -79,7 +79,7 @@ public class USACO {
     int T = Integer.parseInt(text.next());
     char field[][] = new char[N][M];
     for (int r = 0; r < N; r++) {
-      String curr = text.nextLine();
+      String curr = text.next();
       for (int c = 0; c < M; c++) {
         field[r][c] = curr.charAt(c);
         //System.out.println(field[r][c]);
@@ -105,7 +105,7 @@ public class USACO {
             for (int z = 0; z < 4; z++) {
               int rc = moves[z][0];
               int cc = moves[z][1];
-              if (validMove(original, rc, cc)) in[r + rc][c + cc]++;
+              if (validMove(original, rc, cc)) in[r ][c] += original[r + rc][c + cc];
             }
           }
         }
