@@ -94,7 +94,7 @@ public class USACO {
     return -1;
   }
   public static boolean validMove(int[][] field, int r, int c) {
-    return (r >= 0 && c >= 0 && r < field.length && c < field.length) && int[r][c] > -1;
+    return (r >= 0 && c >= 0 && r < field.length && c < field.length) && field[r][c] > -1;
   }
   public static int[][] toNums(char[][] in) {
     int[][] output = new int[in.length][in[0].length];
