@@ -4,7 +4,7 @@ public class USACO {
   public static void main(String[] args) {
     try{
       //bronze("makelake.1.in");
-      silver("ctravel.1.in");
+      System.out.println(silver("ctravel.1.in"));
     }
     catch (FileNotFoundException e) {
       e.printStackTrace();
@@ -85,10 +85,10 @@ public class USACO {
         //System.out.println(field[r][c]);
       }
     }
-    int R1 = Integer.parseInt(text.next());
-    int C1 = Integer.parseInt(text.next());
-    int R2 = Integer.parseInt(text.next());
-    int C2 = Integer.parseInt(text.next());
+    int R1 = Integer.parseInt(text.next()) - 1;
+    int C1 = Integer.parseInt(text.next()) - 1;
+    int R2 = Integer.parseInt(text.next()) - 1;
+    int C2 = Integer.parseInt(text.next()) - 1;
     int[][] nums = toNums(field);
     int[][] moves = { {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     move(nums, T, R1, R2, C1, C2, moves);
@@ -105,7 +105,7 @@ public class USACO {
             for (int z = 0; z < 4; z++) {
               int rc = moves[z][0];
               int cc = moves[z][1];
-              if (validMove(original, rc, cc)) in[r ][c] += original[r + rc][c + cc];
+              if (validMove(original, r + rc, c + cc)) in[r][c] += original[r + rc][c + cc];
             }
           }
         }
