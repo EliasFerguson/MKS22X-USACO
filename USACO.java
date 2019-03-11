@@ -35,6 +35,7 @@ public class USACO {
       int C_s = Integer.parseInt(text.next());
       int D_s = Integer.parseInt(text.next());
       int newLow = 0;
+      //This set of for loops should just find the newLow.
       for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
         for (int colModifier = 0; colModifier < 3; colModifier++) {
           int checkRow = rowModifier + R_s;
@@ -49,6 +50,16 @@ public class USACO {
           }
         }
         newLow -= D_s;
+        //Doing the same thing again, except this time the lake will be set to the newLow or the current lake value.
+        for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
+          for (int colModifier = 0; colModifier < 3; colModifier++) {
+            int checkRow = rowModifier + R_s;
+            int checkCol = colModifier + C_s;
+            if (checkRow < R && checkCol < C) {
+              lake[checkRow][checkCol] = Math.min(newLow, lake[checkRow][checkCol]);
+            }
+          }
+        }
       }
       String debug = "";
       for (int r = 0; r < R; r++) {
