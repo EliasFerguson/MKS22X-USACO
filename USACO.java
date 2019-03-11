@@ -98,6 +98,7 @@ public class USACO {
     in[sr][er] = 1;
     for (int i = 0; i < secs; i++) {
       int[][] original = in;
+      in = new int[original.length][original[0].length];
       for (int r = 0; r < original.length; r++) {
         for (int c = 0; c < original[0].length; c++) {
           if (original[r][c] == -1) in[r][c] = -1;
