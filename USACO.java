@@ -4,7 +4,7 @@ public class USACO {
   public static void main(String[] args) {
     try{
       //bronze("makelake.1.in");
-      System.out.println(silver("ctravel.1.in"));
+      System.out.println(silver("ctravel.2.in"));
     }
     catch (FileNotFoundException e) {
       e.printStackTrace();
@@ -94,7 +94,7 @@ public class USACO {
     return move(nums, T, R1, R2, C1, C2, moves);
   }
   public static int move(int[][] in, int secs, int sr, int er, int sc, int ec, int[][] moves) {
-    in[sr][er] = 1;
+    in[sr][sc] = 1;
     for (int i = 0; i < secs; i++) {
       int[][] original = in;
       in = new int[original.length][original[0].length];
