@@ -90,11 +90,10 @@ public class USACO {
     int R2 = Integer.parseInt(text.next()) - 1;
     int C2 = Integer.parseInt(text.next()) - 1;
     int[][] nums = toNums(field);
-    int[][] moves = { {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    move(nums, T, R1, R2, C1, C2, moves);
-    return nums[R2][C2];
+    int[][] moves = {{1, 0}, {-1, 0}, {0, 1}, {0, -1}};
+    return move(nums, T, R1, R2, C1, C2, moves);
   }
-  public static void move(int[][] in, int secs, int sr, int er, int sc, int ec, int[][] moves) {
+  public static int move(int[][] in, int secs, int sr, int er, int sc, int ec, int[][] moves) {
     in[sr][er] = 1;
     for (int i = 0; i < secs; i++) {
       int[][] original = in;
@@ -112,9 +111,10 @@ public class USACO {
         }
       }
     }
+    return in[er][ec];
   }
   public static boolean validMove(int[][] field, int r, int c) {
-    return (r >= 0 && c >= 0 && r < field.length && c < field.length) && field[r][c] > -1;
+    return (r >= 0 && c >= 0 && r < field.length && c < field[0].length) && field[r][c] != -1;
   }
   public static int[][] toNums(char[][] in) {
     int[][] output = new int[in.length][in[0].length];
