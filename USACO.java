@@ -87,6 +87,7 @@ public class USACO {
         field[r][c] = curr.charAt(0);
       }
     }
+    
     int R1 = Integer.parseInt(text.next());
     System.out.println(R1);
     int C1 = Integer.parseInt(text.next());
