@@ -80,6 +80,13 @@ public class USACO {
     //System.out.println(M);
     int T = Integer.parseInt(text.next());
     //System.out.println(T);
+    char field[][] = new char[N][M];
+    for (int r = 0; r < N; r++) {
+      for (int c = 0; c < M; c++) {
+        String curr = text.next();
+        field[r][c] = curr.charAt(0);
+      }
+    }
     return -1;
   }
 }
