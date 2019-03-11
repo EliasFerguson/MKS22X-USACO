@@ -70,7 +70,16 @@ public class USACO {
       }
     return aggregateElevation * 72 * 72;
   }
-  public static int silver(String filename) {
+  public static int silver(String filename) throws FileNotFoundException {
+    File in = new File(filename);
+    Scanner text = new Scanner(in);
+    //Filling the lake with the text file information.
+    int N = Integer.parseInt(text.next());
+    //System.out.println(N);
+    int M = Integer.parseInt(text.next());
+    //System.out.println(M);
+    int T = Integer.parseInt(text.next());
+    //System.out.println(T);
     return -1;
   }
 }
