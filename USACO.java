@@ -91,12 +91,26 @@ public class USACO {
     int C2 = Integer.parseInt(text.next());
     int[][] nums = toNums(field);
     int[][] moves = { {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
-    move(nums, T, R1, R2, C1, C2);
+    move(nums, T, R1, R2, C1, C2, moves);
     return nums[R2][C2];
   }
-  public static void move(int[][] in, int steps, int sr, int er, int sc, int ec) {
+  public static void move(int[][] in, int secs, int sr, int er, int sc, int ec, int[][] moves) {
     in[sr][er] = 1;
-
+    for (int i = 0; i < secs; i++) {
+      int[][] original = in;
+      for (int r = 0; r < original.length; r++) {
+        for (int c = 0; c < original[0].length; c++) {
+          if (original[r][c] == -1) in[r][c] = -1;
+          else {
+            for (int z = 0; z < 4; z++) {
+              int rc = moves[z][0];
+              int cc = moves[z][1];
+              if (validMove(original, rc, cc)) in[r + rc][c + cc]++;
+            }
+          }
+        }
+      }
+    }
   }
   public static boolean validMove(int[][] field, int r, int c) {
     return (r >= 0 && c >= 0 && r < field.length && c < field.length) && field[r][c] > -1;
