@@ -38,23 +38,24 @@ public class USACO {
       //This set of for loops should just find the newLow.
       for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
         for (int colModifier = 0; colModifier < 3; colModifier++) {
-          int checkRow = rowModifier + R_s;
-          int checkCol = colModifier + C_s;
+          int checkRow = rowModifier + R_s - 1;
+          int checkCol = colModifier + C_s - 1;
           if (checkRow < R && checkCol < C) {
             //System.out.println(lake[checkRow][checkCol] + " ");
             int current = lake[checkRow][checkCol];
-            if (current > 0) {
+            if (current > newLow) {
               newLow = current;
             }
             //System.out.println(lake[checkRow][checkCol] + "\n");
           }
         }
+      }
         newLow -= D_s;
         //Doing the same thing again, except this time the lake will be set to the newLow or the current lake value.
         for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
           for (int colModifier = 0; colModifier < 3; colModifier++) {
-            int checkRow = rowModifier + R_s;
-            int checkCol = colModifier + C_s;
+            int checkRow = rowModifier + R_s - 1;
+            int checkCol = colModifier + C_s - 1;
             if (checkRow < R && checkCol < C) {
               lake[checkRow][checkCol] = Math.min(newLow, lake[checkRow][checkCol]);
             }
@@ -69,9 +70,14 @@ public class USACO {
         debug += '\n';
       }
       System.out.println(debug);
-    }
-
-    return -1;
+      int aggregateElevation = 0;
+      for (int r = 0; r < R; r++) {
+        for (int c = 0; c < C; c++) {
+          if (lake[r][c] < E) aggregateElevation += (E - lake[r][c]);
+        }
+      }
+    System.out.println(aggregateElevation * 72 * 72);
+    return aggregateElevation * 72 * 72;
   }
   public static int silver(String filename) {
     return -1;
