@@ -82,12 +82,13 @@ public class USACO {
     System.out.println(T);
     char field[][] = new char[N][M];
     for (int r = 0; r < N; r++) {
+      String curr = text.next();
       for (int c = 0; c < M; c++) {
-        String curr = text.next();
-        field[r][c] = curr.charAt(0);
+        field[r][c] = curr.charAt(c);
+        System.out.println(field[r][c]);
       }
     }
-    
+
     int R1 = Integer.parseInt(text.next());
     System.out.println(R1);
     int C1 = Integer.parseInt(text.next());
