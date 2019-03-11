@@ -79,7 +79,7 @@ public class USACO {
     int T = Integer.parseInt(text.next());
     char field[][] = new char[N][M];
     for (int r = 0; r < N; r++) {
-      String curr = text.next();
+      String curr = text.nextLine();
       for (int c = 0; c < M; c++) {
         field[r][c] = curr.charAt(c);
         //System.out.println(field[r][c]);
@@ -89,7 +89,12 @@ public class USACO {
     int C1 = Integer.parseInt(text.next());
     int R2 = Integer.parseInt(text.next());
     int C2 = Integer.parseInt(text.next());
+    int[][] nums = toNums(field);
+    int[][] moves = { {1, 0}, {-1, 0}, {0, 1}, {0, -1}};
     return -1;
+  }
+  public static boolean validMove(int[][] field, int r, int c) {
+    return (r >= 0 && c >= 0 && r < field.length && c < field.length) && int[r][c] > -1;
   }
   public static int[][] toNums(char[][] in) {
     int[][] output = new int[in.length][in[0].length];
