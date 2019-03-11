@@ -91,4 +91,13 @@ public class USACO {
     int C2 = Integer.parseInt(text.next());
     return -1;
   }
+  public static int[][] toNums(char[][] in) {
+    int[][] output = new int[in.length][in[0].length];
+    for (int r = 0; r < in.length; r++) {
+      for (int c = 0; c < in[0].length; c++) {
+        if (in[r][c] == '*') output[r][c] = -1;
+      }
+    }
+    return output;
+  }
 }
