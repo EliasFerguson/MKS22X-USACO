@@ -75,11 +75,8 @@ public class USACO {
     File in = new File(filename);
     Scanner text = new Scanner(in);
     int N = Integer.parseInt(text.next());
-    //System.out.println(N);
     int M = Integer.parseInt(text.next());
-    //System.out.println(M);
     int T = Integer.parseInt(text.next());
-    //System.out.println(T);
     char field[][] = new char[N][M];
     for (int r = 0; r < N; r++) {
       String curr = text.next();
@@ -89,13 +86,9 @@ public class USACO {
       }
     }
     int R1 = Integer.parseInt(text.next());
-    //System.out.println(R1);
     int C1 = Integer.parseInt(text.next());
-    //System.out.println(C1);
     int R2 = Integer.parseInt(text.next());
-    //System.out.println(R2);
     int C2 = Integer.parseInt(text.next());
-    //System.out.println(C2);
     return -1;
   }
 }
