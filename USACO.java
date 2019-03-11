@@ -34,6 +34,7 @@ public class USACO {
       int R_s = Integer.parseInt(text.next());
       int C_s = Integer.parseInt(text.next());
       int D_s = Integer.parseInt(text.next());
+      int newLow = 0;
       for (int rowModifier = 0; rowModifier < 3; rowModifier++) {
         for (int colModifier = 0; colModifier < 3; colModifier++) {
           int checkRow = rowModifier + R_s;
@@ -42,11 +43,12 @@ public class USACO {
             //System.out.println(lake[checkRow][checkCol] + " ");
             int current = lake[checkRow][checkCol];
             if (current > 0) {
-              int newLow = current;
+              newLow = current;
             }
             //System.out.println(lake[checkRow][checkCol] + "\n");
           }
         }
+        newLow -= D_s;
       }
       String debug = "";
       for (int r = 0; r < R; r++) {
