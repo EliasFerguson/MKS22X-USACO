@@ -3,7 +3,8 @@ import java.io.*;
 public class USACO {
   public static void main(String[] args) {
     try{
-      bronze("makelake.1.in");
+      //bronze("makelake.1.in");
+      silver("ctravel.1.in");
     }
     catch (FileNotFoundException e) {
       e.printStackTrace();
@@ -73,13 +74,12 @@ public class USACO {
   public static int silver(String filename) throws FileNotFoundException {
     File in = new File(filename);
     Scanner text = new Scanner(in);
-    //Filling the lake with the text file information.
     int N = Integer.parseInt(text.next());
-    //System.out.println(N);
+    System.out.println(N);
     int M = Integer.parseInt(text.next());
-    //System.out.println(M);
+    System.out.println(M);
     int T = Integer.parseInt(text.next());
-    //System.out.println(T);
+    System.out.println(T);
     char field[][] = new char[N][M];
     for (int r = 0; r < N; r++) {
       for (int c = 0; c < M; c++) {
@@ -87,6 +87,14 @@ public class USACO {
         field[r][c] = curr.charAt(0);
       }
     }
+    int R1 = Integer.parseInt(text.next());
+    System.out.println(R1);
+    int C1 = Integer.parseInt(text.next());
+    System.out.println(C1);
+    int R2 = Integer.parseInt(text.next());
+    System.out.println(R2);
+    int C2 = Integer.parseInt(text.next());
+    System.out.println(C2);
     return -1;
   }
 }
