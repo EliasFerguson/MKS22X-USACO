@@ -39,9 +39,12 @@ public class USACO {
           int checkRow = rowModifier + R_s;
           int checkCol = colModifier + C_s;
           if (checkRow < R && checkCol < C) {
-            System.out.println(lake[checkRow][checkCol] + " ");
-            lake[checkRow][checkCol] -= D_s;
-            System.out.println(lake[checkRow][checkCol] + "\n");
+            //System.out.println(lake[checkRow][checkCol] + " ");
+            int current = lake[checkRow][checkCol];
+            if (current > 0) {
+              int newLow = current;
+            }
+            //System.out.println(lake[checkRow][checkCol] + "\n");
           }
         }
       }
@@ -54,7 +57,7 @@ public class USACO {
       }
       System.out.println(debug);
     }
-    
+
     return -1;
   }
   public static int silver(String filename) {
